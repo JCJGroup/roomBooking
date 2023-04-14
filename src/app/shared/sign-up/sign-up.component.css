@@ -1,0 +1,16 @@
+mat-form-field {
+    width: 100% !important;
+}
+
+.send-button {
+    border-radius: 50%;
+    /* background-color: darkgrey; */
+}
+
+.send-button:hover {
+    cursor: pointer;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: white;
+}

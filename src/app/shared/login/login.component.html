@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-body">
+        <div class="form-container">
+            <form [formGroup]="loginForm">
+                <mat-form-field appearance="outline" color="primary">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" placeholder="Enter Official Email" formControlName="email">
+                    <mat-error *ngIf="loginForm.controls.email.invalid">{{getErrorMessage()}}</mat-error>
+                    <button mat-icon-button matSuffix color="primary" type="submit" [disabled]="loginForm.invalid"
+                        matTooltip="Send Email" aria-label="Send Email" class="send-button">
+                        <mat-icon>send</mat-icon>
+                    </button>
+                </mat-form-field>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="o-c">
+        <div>
+            <div class="card">
+                <p class="a-o-i">Enter OTP</p>
+                <ng-otp-input class="otp-input" (onInputChange)="onOtpChange($event)" *ngIf="showOtpComponent"
+                    [config]="config"></ng-otp-input>
+                <div style="text-align:center; margin-top: 3%;">
+                    <button mat-raised-button color="primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
